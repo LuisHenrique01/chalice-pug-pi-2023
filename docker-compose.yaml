@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  app:
+    build: .
+    command: chalice deploy
+    environment:
+      - AWS_DEFAULT_REGION=us-west-2
+      - AWS_ACCESS_KEY_ID=AKIAUAW6ZTMIZ2DRFT77
+      - AWS_SECRET_ACCESS_KEY=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
+    volumes:
+      - ~/.aws:/root/.aws

@@ -1,0 +1,46 @@
+{
+  "resources": [
+    {
+      "name": "default-role",
+      "resource_type": "iam_role",
+      "role_arn": "arn:aws:iam::276418894609:role/meuremedioapi-dev",
+      "role_name": "meuremedioapi-dev"
+    },
+    {
+      "name": "validar_notificacao",
+      "resource_type": "lambda_function",
+      "lambda_arn": "arn:aws:lambda:us-west-2:276418894609:function:meuremedioapi-dev-validar_notificacao"
+    },
+    {
+      "name": "validar_notificacao-event",
+      "resource_type": "cloudwatch_event",
+      "rule_name": "meuremedioapi-dev-validar_notificacao-event"
+    },
+    {
+      "name": "fila_de_email",
+      "resource_type": "lambda_function",
+      "lambda_arn": "arn:aws:lambda:us-west-2:276418894609:function:meuremedioapi-dev-fila_de_email"
+    },
+    {
+      "name": "fila_de_email-sqs-event-source",
+      "resource_type": "sqs_event",
+      "queue_arn": "arn:aws:sqs:us-west-2:276418894609:send-email",
+      "event_uuid": "1f23f389-4bb3-4d2a-9d1e-4c583f409a8c",
+      "queue": "send-email",
+      "lambda_arn": "arn:aws:lambda:us-west-2:276418894609:function:meuremedioapi-dev-fila_de_email"
+    },
+    {
+      "name": "api_handler",
+      "resource_type": "lambda_function",
+      "lambda_arn": "arn:aws:lambda:us-west-2:276418894609:function:meuremedioapi-dev"
+    },
+    {
+      "name": "rest_api",
+      "resource_type": "rest_api",
+      "rest_api_id": "1pdkv9go1l",
+      "rest_api_url": "https://1pdkv9go1l.execute-api.us-west-2.amazonaws.com/sandbox/"
+    }
+  ],
+  "schema_version": "2.0",
+  "backend": "api"
+}
