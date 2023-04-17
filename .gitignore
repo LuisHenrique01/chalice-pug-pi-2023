@@ -1,5 +1,6 @@
 .chalice/deployments/
 .chalice/venv/
-.chalice/config.json
 .env
+Dockerfile
+docker-compose.yaml
 /venv

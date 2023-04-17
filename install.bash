@@ -32,3 +32,6 @@ chalice delete
 Deleting Rest API: 87ilpizg4b
 Deleting function: arn:aws:lambda:us-west-2:276418894609:function:pelandoapi-dev
 Deleting IAM role: pelandoapi-dev
+
+docker run -p 8000:8000 test_aws
+docker compose up
